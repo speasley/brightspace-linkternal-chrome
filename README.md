@@ -7,7 +7,7 @@
 
 ### From the Chrome Web Store (Recommended)
 
-1. Visit the [Brightspace Linkternal extension page](https://chromewebstore.google.com/detail/brightspace-linkternal/jjipgkhomehdhimjffjpghakjjkdijag?hl=en).
+1. Visit the [Brightspace Linkternal extension page](https://chromewebstore.google.com/detail/brightspace-linkternal/ablemfljefkdoggemeahgpmidpeneeaj?hl=en).
 
 2. Click the "Add to Chrome" button.
 
