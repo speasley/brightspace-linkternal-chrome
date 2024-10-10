@@ -1,7 +1,7 @@
 # Brightspace Linkternal Chrome Extension
 
 ## Description
-**Brightspace Linkternal** make external links in assessment submissions open in a new tab in the [D2L Brightspace Learning Management System](https://www.d2l.com/brightspace/) UI.
+**Brightspace Linkternal** parses the [D2L Brightspace Learning Management System](https://www.d2l.com/brightspace/) DOM and adds a target attribute to external links, ensuring they will open in a new tab when clicked.
 
 ## Installation
 
