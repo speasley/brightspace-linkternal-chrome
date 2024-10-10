@@ -39,4 +39,4 @@ While this extension collects no data, you can still read its applicable [privac
 
 ### Disclaimer
 
-Neither this extension nor its author are affiliated with or endorsed by D2L. This is an independent project created for the purpose of reducing potential evaluation bias.
+Neither this extension nor its author are affiliated with or endorsed by D2L. This is an independent project created for the purpose of improving the experience of using D2L Brightspace.
