@@ -1,4 +1,4 @@
-setTimeout(() => {
+const makeLinksExternal = () => {
     const isD2l = document.querySelector("body.d2l-body");
 
     const findElementsInShadowDom = (root, className, findFirst = false) => {
@@ -26,18 +26,9 @@ setTimeout(() => {
         return findFirst ? null : elements;
     };
 
-    const injectStylesIntoShadowDom = (element, css) => {
-        if (element.shadowRoot) {
-            const style = document.createElement('style');
-            style.textContent = css;
-            element.shadowRoot.appendChild(style);
-        }
-    };
-
     if (isD2l) {
         const rootElement = document.querySelector("body.d2l-body");
         
-        // Simplified to a single function call
         const submissionListView = findElementsInShadowDom(rootElement, "d2l-consistent-evaluation-submission-list-view", true);
 
         if (submissionListView) {
@@ -55,4 +46,21 @@ setTimeout(() => {
             });
         }
     }
-}, 4000);
+};
+
+const observer = new MutationObserver(mutations => {
+    for (let mutation of mutations) {
+        if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+            makeLinksExternal();
+        }
+    }
+});
+
+const body = document.querySelector("body.d2l-body");
+if (body) {
+    observer.observe(body, { childList: true, subtree: true });
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    makeLinksExternal();
+});
