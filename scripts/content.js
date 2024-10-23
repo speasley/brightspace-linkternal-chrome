@@ -38,9 +38,11 @@ const makeLinksExternal = () => {
                 items.forEach(item => {
                     const links = item.querySelectorAll("a");
                     links.forEach(link => {
-                        link.classList.add("brightspace-linkternal");
-                        link.innerHTML += '<span class="link-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="height: auto; transform: translate(2px, -4px); width: 13px;"><path d="M14 5a.94.94 0 0 1-1-1 .94.94 0 0 1 1-1h6c.3 0 .5.1.7.3s.3.4.3.7v6a.94.94 0 0 1-1 1 .94.94 0 0 1-1-1V6.4l-9.3 9.3c-.4.4-1 .4-1.4 0s-.4-1 0-1.4L17.6 5H14zM3 7c0-1.1.9-2 2-2h5a.94.94 0 0 1 1 1 .94.94 0 0 1-1 1H5v12h12v-5a.94.94 0 0 1 1-1 .94.94 0 0 1 1 1v5c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V7z" style="fill: currentColor;"/></svg></span>';
-                        link.setAttribute("target", "_blank");
+                        if (!link.classList.contains("brightspace-linkternal")) {
+                            link.classList.add("brightspace-linkternal");
+                            link.innerHTML += '<span class="link-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="height: auto; transform: translate(2px, -4px); width: 13px;"><path d="M14 5a.94.94 0 0 1-1-1 .94.94 0 0 1 1-1h6c.3 0 .5.1.7.3s.3.4.3.7v6a.94.94 0 0 1-1 1 .94.94 0 0 1-1-1V6.4l-9.3 9.3c-.4.4-1 .4-1.4 0s-.4-1 0-1.4L17.6 5H14zM3 7c0-1.1.9-2 2-2h5a.94.94 0 0 1 1 1 .94.94 0 0 1-1 1H5v12h12v-5a.94.94 0 0 1 1-1 .94.94 0 0 1 1 1v5c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V7z" style="fill: currentColor;"/></svg></span>';
+                            link.setAttribute("target", "_blank");
+                        }
                     });
                 });
             });
